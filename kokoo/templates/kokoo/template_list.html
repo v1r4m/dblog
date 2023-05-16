@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>트친소 만들기</title>
+    </head>
+    <header>
+        <h1><a href="/">트친소 만들기</a></h1>
+    </header>
+    {% for template in templates %}
+    <article>
+        <time>published: {{ template.published_date }}</time>
+        <h2><a href="">{{ template.title }}</a></h2>
+        <p>{{ template.text|linebreaksbr }}</p>
+    </article>
+{% endfor %}
+</html>
